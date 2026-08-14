@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myapp-replicaset
+  labels:
+    app: myapp
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: myapp
+
+  template:
+    metadata:
+      labels:
+          app: myapp
+          type: front-end
+    spec:
+      containers:
+        - name: nginx-container
+          image: nginx
+        - name: mongo-container
+          image: mongo
+        - name: redis-container
+          image: redis
+          ports:
+            - containerPort: 6379
