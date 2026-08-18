@@ -2,9 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: myapp-deployment
+  labels:
+      bali: CP
 
 spec:
-  replicas: 2
+  replicas: 3
   revisionHistoryLimit: 10
   selector:
     matchLabels:
@@ -18,3 +20,6 @@ spec:
       containers:
         - name: nginx-container
           image: nginx
+        - name: mongo-container
+          image: mongo
+          
