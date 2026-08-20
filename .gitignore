@@ -1,0 +1,12 @@
+# Editor / local
+.obsidian/
+*.swp
+*~
+.DS_Store
+
+# Node dependencies should not be tracked in this documentation repository
+node_modules/
+
+# Optional: uncomment if you track large binaries elsewhere
+# *.pptx
+# *.pdf
