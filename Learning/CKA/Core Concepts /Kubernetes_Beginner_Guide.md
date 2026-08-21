@@ -1,6 +1,8 @@
 # Kubernetes Architecture, Very Easy Explanation
 
 The correct names are:
+Note : Master is the older Kubernetes term. Control plane is the current preferred term.
+
 
 - **Master** is now usually called the **Control Plane**.
 - **Control Manager** is called the **Controller Manager**.
